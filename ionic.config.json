@@ -1,0 +1,7 @@
+{
+  "name": "GamesLog",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
