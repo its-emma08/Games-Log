@@ -1,0 +1,25 @@
+<ion-content class="login-container">
+  <div class="logo">
+    <img src="/assets/img/logo.png" alt="Logo">
+  </div>
+
+  <div class="login-box">
+    <h2>Iniciar sesión</h2>
+
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="login()">Ingresar</ion-button>
+
+    <p class="register-link">
+      ¿No tienes cuenta? <a routerLink="/register">Regístrate</a>
+    </p>
+  </div>
+</ion-content>

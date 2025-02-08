@@ -1,0 +1,73 @@
+.login-container {
+    --background: url('/assets/img/juegosyes.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén apilados verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;     /* Centra el contenido horizontalmente */
+    height: 100vh;           /* Asegura que el contenedor ocupe el 100% de la altura de la pantalla */
+    text-align: center;
+    padding: 0 20px;         /* Agrega algo de espacio a los lados en pantallas pequeñas */
+  }
+  
+  .logo img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .login-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;        /* Limita el ancho máximo */
+    text-align: center;
+    color: white;
+    margin: 0 auto;          /* Asegura que el cuadro de login esté centrado */
+  }
+  
+  ion-item {
+    --padding-start: 15px;
+    --inner-padding-end: 15px;
+  }
+  
+  ion-label {
+    color: #fff;
+  }
+  
+  ion-input {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 5px;
+  }
+  
+  ion-button {
+    background: linear-gradient(90deg, #ff7f00, #ff3e00);
+    color: white;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  ion-button:hover {
+    background: linear-gradient(90deg, #ff3e00, #ff7f00);
+    transform: scale(1.05);
+  }
+  
+  .register-link {
+    margin-top: 15px;
+    color: #fff;
+  }
+  
+  .register-link a {
+    color: #ff7f00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
