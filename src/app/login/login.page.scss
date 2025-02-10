@@ -1,68 +1,110 @@
-.login-container {
-  --background: url('/assets/img/Game Boy2.jpg') no-repeat center center / cover;
-  display: flex;
-  flex-direction: column; /* Asegura que los elementos estén apilados verticalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center;     /* Centra el contenido horizontalmente */
-  height: 100vh;           /* Asegura que el contenedor ocupe el 100% de la altura de la pantalla */
-  text-align: center;
-  padding: 0 20px;         /* Agrega algo de espacio a los lados en pantallas pequeñas */
-}
-
-.logo img {
-  width: 100px;
-  margin-bottom: 20px;
-}
-
-.login-box {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+html, body {
+  height: 100%;
   width: 100%;
-  max-width: 400px;        /* Limita el ancho máximo */
-  text-align: center;
-  color: white;
-  margin: 0 auto;          /* Asegura que el cuadro de login esté centrado */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #0d0d0d; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  font-family: 'Press Start 2P', cursive; /* Fuente estilo gamer */
 }
 
+ion-app, ion-content {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --background: #0d0d0d; /* Fondo oscuro */
+}
+
+/* Caja de login con estilo gamer */
+.login-box {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffea;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 3px solid #00ffea;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #00ffea;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #00ffea;
+}
+
+/* Estilos de los inputs */
 ion-item {
-  --padding-start: 15px;
-  --inner-padding-end: 15px;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 ion-label {
-  color: #fff;
+  color: #00ffea;
+  font-weight: bold;
 }
 
 ion-input {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border-radius: 5px;
+  background: #222;
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid #00ffea;
+  width: 100%;
+  color: #00ffea;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
 }
 
+/* Botón de login estilo gamer */
 ion-button {
-  background: linear-gradient(90deg, #ff7f00, #ff3e00);
-  color: white;
+  width: 100%;
+  padding: 12px;
+  background: #00ffea;
+  color: #0d0d0d;
+  border: 2px solid #00ffea;
   border-radius: 8px;
-  padding: 12px 20px;
   font-size: 18px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
 }
 
 ion-button:hover {
-  background: linear-gradient(90deg, #ff3e00, #ff7f00);
-  transform: scale(1.05);
+  background: #00b3c6;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ffea;
 }
 
-.register-link {
+/* Links y textos */
+.forgot-password, .sign-in-text, .register-link {
   margin-top: 15px;
-  color: #fff;
+  color: #00ffea;
+  text-shadow: 0 0 5px #00ffea;
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .register-link a {
-  color: #ff7f00;
+  color: #00ffea;
   text-decoration: none;
   font-weight: bold;
 }
@@ -71,11 +113,53 @@ ion-button:hover {
   text-decoration: underline;
 }
 
-/* Estilos para el contenedor del botón de Google */
+/* Media queries */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  ion-input, ion-button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .login-box {
+    padding: 30px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  ion-input, ion-button {
+    font-size: 17px;
+  }
+}
+
+/* Botón de Google */
 #signInDiv {
-  width: 100%;
-  max-width: 350px;
   margin-top: 20px;
+  width: 100%;
   display: flex;
   justify-content: center;
+  gap: 15px;
+}
+
+#signInDiv button {
+  background: #222;
+  border: 2px solid #00ffea;
+  border-radius: 8px;
+  color: #00ffea;
+  padding: 10px 20px;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#signInDiv button:hover {
+  background: #00ffea;
+  border-color: #00b3c6;
+  color: #0d0d0d;
+  box-shadow: 0 0 10px #00ffea;
 }

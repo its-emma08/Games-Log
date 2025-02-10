@@ -1,28 +1,20 @@
 <ion-content class="login-container">
-  <div class="logo">
-    <img src="assets/img/Eli-Photoroom.png" alt="Eli">
-  </div>
-
-  <div class="login-box">
-    <h2>Iniciar sesión</h2>
-
-    <ion-item>
-      <ion-label position="floating">Correo electrónico</ion-label>
-      <ion-input type="email" [(ngModel)]="email"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
-
-    <ion-button expand="full" (click)="login()">Ingresar</ion-button>
-
-    <!-- Contenedor donde se renderiza el botón de Google -->
-    <div id="signInDiv"></div> 
-
-    <p class="register-link">
-      ¿No tienes cuenta? <a routerLink="/register">Regístrate</a>
-    </p>
+  <div class="login-wrapper">
+    <form (ngSubmit)="login()" #loginForm="ngForm" class="login-box">
+      <h2>SIGN IN</h2>
+      <ion-item>
+        <ion-input [(ngModel)]="email" name="email" placeholder="Username or Email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+      </ion-item>
+      <p class="forgot-password">Forgot your password?</p>
+      <ion-button type="submit" expand="full" [disabled]="!loginForm.form.valid">Submit</ion-button>
+      <p class="sign-in-text">Sign in with</p>
+      <div id="signInDiv"></div>
+      <p class="register-link">
+        Don't have an account? <a routerLink="/register">Sign Up</a>
+      </p>
+    </form>
   </div>
 </ion-content>
